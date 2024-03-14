@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %>
+  <%- include('../partials/head.ejs') %>
   <body>
-    <%- include('./partials/nav.ejs') %>
+    <%- include('../partials/nav.ejs') %>
     <div class="blog details">
       <h2 class="title"><%= blog.title %></h2>
       <div class="content">
         <p class="body"><%= blog.body %></p>
-        <a class="delete" data-doc="<%= blog._id %>">delete</a>
+        <a class="delete" data-doc="<%= blog._id %>">
+          <img src="/trashcan.svg" alt="trashcan image" />
+        </a>
       </div>
     </div>
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
   </body>
   <script>
     const trashcan = document.querySelector('a.delete');
